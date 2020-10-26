@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\froman\fprq2\fcharset0 Times New Roman;}}
+{\colortbl ;\red255\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\sa200\sl276\slmult1\lang9\b\f0\fs22 Peer-graded Assignment: TCP/IP and Advanced Topics\b0\par
+\par
+\b 1-\b0\par
+\par
+A university has 150 LANs with 100 hosts in each LAN.\par
+\par
+(a) Suppose the university has one Class B address. Design an appropriate subnet addressing scheme.\par
+\par
+(b) Design an appropriate CIDR addressing scheme.\par
+\b Ans: \par
+(a)Class B address is 172.16.0.0 and subnet mask is 255.255.0.0 of default subnet mask class B if we keep same subnet mask we will be having more wastage in the hosts , so we will increase 1 bit 255.255.128.0 as a default mask now we need 100 hosts and 150 subnet but we cant get the exact number but get power of 2^n so number of 1s gives subnet and number of 0s gives hosts 2^7 = 128 hosts and remaining bits out of 32 which is 25 1s 11111111.11111111.11111111.10000000 or /25 or 255.255.255.128 will be subnet mask.\par
+for all the below mention IP range  host siz will be 126.\par
+\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\cf1\lang1033\b0\i Network ID\cell SUBNET MASK\cell HOST RANGE\cell BROADCAST\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl 172.16.0.0\f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.0.1 to 172.16.0.126          \f1\cell\f0 172.16.0.127   \f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0 172.16.0.128\f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.0.129 to 172.16.0.254        \f1\cell\f0 172.16.0.255    \f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0 172.16.1.0             \f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.1.1 to 172.16.1.126          \f1\cell\f0 172.16.1.127   \f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0 172.16.1.128           \f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.1.129 to 172.16.1.254        \f1\cell\f0 172.16.1.255   \f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0 172.16.2.0             \f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.2.1 to 172.16.2.126          \f1\cell\f0 172.16.2.127\f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85 TILL\cell\cell\cell\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl 172.16.74.0\f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.74.1 to 172.16.74.126        \f1\cell\f0 172.16.74.127\f1\cell\row\trowd\trgaph108\trleft-108\trbrdrl\brdrs\brdrw10 \trbrdrt\brdrs\brdrw10 \trbrdrr\brdrs\brdrw10 \trbrdrb\brdrs\brdrw10 \trpaddl108\trpaddr108\trpaddfl3\trpaddfr3
+\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx2229\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx4566\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx7717\clbrdrl\brdrw10\brdrs\clbrdrt\brdrw10\brdrs\clbrdrr\brdrw10\brdrs\clbrdrb\brdrw10\brdrs \cellx9242\pard\intbl\f0 172.16.74.128\f1\cell\f0 255.255.255.128       \f1\cell\f0 172.16.74.129 to 172.16.74.254      \f1\cell\f0 172.16.74.255\f1\cell\row\pard\nowidctlpar\sa200\sl276\slmult1\cf0\lang9\b\i0\f0\par
+\par
+        \par
+(b)\par
+Design an appropriate CIDR addressing scheme.A CIDR addressing scheme involves devising a prefix length that indicates the length of the network mask.    In this case, 8 bits are required to identify each LAN (since 127 < 150 < 255) and 7 bits are required to identify each host in each LAN (since 63 < 100 < 127).  Therefore a CIDR address would use a 17-bit prefix and a 15-bit host id, and thus have an address of the form address/17.4\b0\par
+\par
+\par
+2-\par
+\par
+A router has the following CIDR entries in its routing table:\par
+Address/mask Next hop\par
+135.46.56.0/22 Interface 0\par
+135.46.60.0/22 Interface 1\par
+192.53.40.0/23 Router 1\par
+default Router 2\par
+\par
+(a) What does the router do if a packet with an IP address 135.46.63.10 arrives?\par
+\par
+(b) What does the router do if a packet with an IP address 135.46.57.14 arrives?\par
+\par
+Show the main procedure to support your answer.\par
+\b Ans: \par
+(a) \par
+for 135.46.63.10\par
+The router will check the routing entry starting with the longest prefix (/23), i.e 192.53.40.0/23.  here  '/23' mean network address is 23 bit and the corresponding network mask is 255.255.255.0.\par
+135.45.63.10 & 255.255.254.0=135.45.62.0 != 192.53.40.0 therefore this entry does not match. Next longest prefix is /22. 135.45.63.10 & 255.255.252.0=135.45.60.0. It matches 135.45.60.0/22 routing entry, therefore the packet will be routed out over Interface 1. With quick observation, we can skip the routing entry with 192.53.40.0/23 but the router cannot.\par
+so answer is Interface 1\par
+(b) \par
+for 135.46.57.14\par
+ 135.46.57.14 & 255.255.252.0=135.45.56.0. It matches 135.45.56.0/22 routing entry and the packet will be routed out over Interface 0.\par
+so answer is interface 0\par
+\par
+\b0\par
+\par
+3-\par
+Consider the three-way handshake in TCP connection setup.\par
+\par
+(a) Suppose that an old SYN segment from station A arrives at station B, requesting a TCP connection. Explain how the three-way handshake procedure ensures that the connection is rejected.\par
+\par
+(b) Now suppose that an old SYN segment from station A arrives at station B, followed a bit later by an old ACK segment from A to a SYN segment from B. Is this connection request also rejected?\par
+\b ans:\par
+(a)\b0\par
+\b In the threeway handshake procedure,one must ensure the selection sequence number is always unique.If station B receives an old SYN segment from A, B willacknowledge the request based on the old sequence number.When A receives theacknowledgment segment from B, A will find out that B received awrong sequencenumber. A will discard the acknowledgment packet and reset the connection.\par
+(b)\par
+If an old SYN segment from A arrives at B, followed by an old ACK segment from A to a SYNsegment from B, the connection will also be rejected. Initially, when B receives an oldSYN segment, B will send a SYN segment with its own distinct sequence number set byitself. If B receives the old ACK from A, B will notify A that the connection is invalid sincethe old ACK sequence number does not match thesequence number previously defined byB. Therefore, the connection is rejected\par
+\par
+\par
+\b0\par
+}
+ 
